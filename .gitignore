@@ -1,0 +1,9 @@
+# secret
+.copilot_token
+.devcontainer/devcontainer.env
+
+# node
+extension/node_modules
+
+# vscode
+.vscode
