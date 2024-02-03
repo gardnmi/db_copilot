@@ -88,7 +88,3 @@ chrome.storage.sync.get(['endpoint'], function (result) {
     document.getElementById('endpoint').value = result.endpoint;
 });
 
-
-
-
-// "https://992b-75-35-194-246.ngrok-free.app/api"
