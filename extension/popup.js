@@ -3,13 +3,24 @@ monaco.languages.registerInlineCompletionsProvider("python", {
     // This function provides inline completions based on the current model, position, and context
     provideInlineCompletions: async function (model, position, context, token) {
 
+        let endpoint = document.getElementById('endpoint').value;
+
+        // set the endpoint from chrome storage
+        chrome.storage.sync.set({ endpoint: endpoint }, function () {
+            // console.log('Value is set to ' + endpoint);
+        });
+
+        // If the endpoint is not defined, exit the function
+        if (endpoint == undefined || endpoint == "") {
+            console.log("No endpoint found Exiting: " + endpoint)
+            return
+        };
+
         // Get the editor content up to the current position
         const editorContent = model.getValueInRange({ startLineNumber: 1, startColumn: 1, endLineNumber: position.lineNumber, endColumn: position.column });
 
-        console.log(editorContent);
-
         // Make an API call with the editor content and await the response
-        const apiResponse = await makeApiCall(editorContent);
+        const apiResponse = await makeApiCall(editorContent, endpoint);
 
         // console.log(apiResponse);
         // Define a completion item with the API response as the insert text
@@ -28,7 +39,7 @@ monaco.languages.registerInlineCompletionsProvider("python", {
 });
 
 // This function makes an API call with the provided code
-async function makeApiCall(code) {
+async function makeApiCall(code, endpoint) {
 
     // Define the payload for the API call
     const payload = {
@@ -37,7 +48,7 @@ async function makeApiCall(code) {
     };
 
     // Make a POST request to the API with the payload
-    const response = await fetch("https://4592-75-35-194-246.ngrok-free.app/api", {
+    const response = await fetch(endpoint, {
         method: "POST",
         // mode: 'no-cors',
         headers: {
@@ -71,3 +82,13 @@ chrome.storage.sync.get(['notebookTitle'], function (result) {
     document.getElementById('notebook_title').innerText = result.notebookTitle;
 });
 
+// Set the endpoint from chrome storage
+chrome.storage.sync.get(['endpoint'], function (result) {
+    // console.log('Value currently is ' + result.endpoint);
+    document.getElementById('endpoint').value = result.endpoint;
+});
+
+
+
+
+// "https://992b-75-35-194-246.ngrok-free.app/api"

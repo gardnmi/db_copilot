@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-		<link
-			rel="stylesheet"
-			data-name="vs/editor/editor.main"
-			href="../node_modules/monaco-editor/min/vs/editor/editor.main.css"
-		/>
-	</head>
-	<body>
-		<h2 id="notebook_title">Insert Notebook Name Here</h2>
-		<div id="container" style="width: 1200px; height: 800px"></div>
 
-		<script>
-			var require = { paths: { vs: '../node_modules/monaco-editor/min/vs' } };
-		</script>
-		<script src="../node_modules/monaco-editor/min/vs/loader.js"></script>
-		<script src="../node_modules/monaco-editor/min/vs/editor/editor.main.nls.js"></script>
-		<script src="../node_modules/monaco-editor/min/vs/editor/editor.main.js"></script>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<link rel="stylesheet" data-name="vs/editor/editor.main"
+		href="../node_modules/monaco-editor/min/vs/editor/editor.main.css" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+	<!-- create form to paste endpoint url so popup.js can grab -->
+	<div class="container my-5">
 
-		<script src="popup.js"></script>
-	</body>
+
+
+	<h3 id="notebook_title">Insert Notebook Name Here</h3>
+	<div class="input-group mb-3">
+		<input type="text" id="endpoint" class="form-control" placeholder="Enter CoPilot Endpoint" aria-label="Enter CoPilot Endpoint">
+	</div>	
+	<div id="container" style="width: 1200px; height: 800px"></div>
+	</div>
+	<script>
+		var require = { paths: { vs: '../node_modules/monaco-editor/min/vs' } };
+	</script>
+	<script src="../node_modules/monaco-editor/min/vs/loader.js"></script>
+	<script src="../node_modules/monaco-editor/min/vs/editor/editor.main.nls.js"></script>
+	<script src="../node_modules/monaco-editor/min/vs/editor/editor.main.js"></script>
+
+	<script src="popup.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+
 </html>
