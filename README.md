@@ -10,6 +10,8 @@
 
 Github Copilot for Databricks notebooks.
 
+![](https://i.imgur.com/hZJw5RW.mp4)
+
 ## Motivation
 
 Replace with non AI Generated text:
