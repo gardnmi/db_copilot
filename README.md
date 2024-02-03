@@ -9,7 +9,7 @@
 
 Github Copilot for Databricks notebooks.
 
-!(image)[https://i.imgur.com/NqQyO0V.gif]
+<img src="https://i.imgur.com/NqQyO0V.gif"/>
 
 ## Motivation
 
