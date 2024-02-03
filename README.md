@@ -1,8 +1,10 @@
+
 <a>
-    <img src="https://i.imgur.com/XNquU2o.png" alt="Databricks CoPilot logo" title="Databricks CoPilot" align="left" height="42" />
+    <img src="https://i.imgur.com/XNquU2o.png" alt="Databricks CoPilot logo" title="Databricks CoPilot" align="right" height="42" />
 </a>
 
 # Databricks CoPilot 
+
 
 Github Copilot for Databricks notebooks.
 
@@ -31,7 +33,7 @@ Replace with non AI Generated text:
 
     ```
     # .devcontainer/devcontainer.env
-    
+
     NGROK_TOKEN=<your_ngrok_token>
     ```
 
