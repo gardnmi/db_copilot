@@ -1,9 +1,9 @@
 
 <a>
-    <img src="https://i.imgur.com/XNquU2o.png" alt="Databricks CoPilot logo" title="Databricks CoPilot" align="right" height="42" />
+    <img src="https://i.imgur.com/XNquU2o.png" alt="Databricks CoPilot logo" title="Databricks CoPilot" align="right" height="135" />
 </a>
 
-# Databricks CoPilot 
+# Databricks Copilot 
 
 
 Github Copilot for Databricks notebooks.
