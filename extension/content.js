@@ -88,7 +88,7 @@ function getParentCode() {
         if (divElement.querySelector('[data-mode-id]').getAttribute("data-mode-id") == "python") {
 
             // Get the cell title
-            result.push("# COMMAND - " + divElement.innerText.split("\n")[0]);
+            result.push("# " + divElement.innerText.split("\n")[0]);
 
             // Loop through the child elements of the active cell
             chilldElements = divElement.querySelector('[data-mprt="7"]').childNodes
