@@ -18,7 +18,7 @@ while True:
     
     payload["prompt"] += f"{response.text.replace("\n", "")}\n"
     
-    print(repr(payload["prompt"]))
+    # print(repr(payload["prompt"]))
     text = payload["prompt"]    
         
 
