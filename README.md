@@ -1,14 +1,41 @@
-# Foobar
+<a>
+    <img src="https://i.imgur.com/XNquU2o.png" alt="Databricks CoPilot logo" title="Databricks CoPilot" align="left" height="42" />
+</a>
 
-Foobar is a Python library for dealing with word pluralization.
+# Databricks CoPilot 
+
+Github Copilot for Databricks notebooks.
+
+## Motivation
+
+Replace with non AI Generated text:
+
+>Databricks CoPilot is a tool that helps you write Databricks notebooks faster. It provides code suggestions and completions based on the context of your notebook. 
+
+## Prerequisites:
+
+* [Github Copilot Subscription](https://github.com/features/copilot)
+* [VSCode Dev Container Extension](https://code.visualstudio.com/docs/devcontainers/tutorial)
+* Chrome
+* [Ngrok Account](https://ngrok.com/)
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+1. Clone the repository:
 
-```bash
-pip install foobar
-```
+    ```bash
+    git clone https://github.com/gardnmi/deductible_dbx.git
+    ```
+
+2. Add a `devcontainer.env` file to the `.devcontainer` directory with the following content:
+
+    ```
+    # .devcontainer/devcontainer.env
+    
+    NGROK_TOKEN=<your_ngrok_token>
+    ```
+
+
 
 ## Usage
 
