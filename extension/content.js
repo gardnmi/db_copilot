@@ -85,7 +85,16 @@ function getParentCode() {
     for (let i = 0; i < cellArray.length; i++) {
         const divElement = cellArray[i];
 
-        if (divElement.querySelector('[data-mode-id]').getAttribute("data-mode-id") == "python") {
+        dataMode = divElement.querySelector('[data-mode-id]')
+        
+        if (!dataMode) {
+            continue;
+        }
+
+        languageType = dataMode.getAttribute("data-mode-id");
+
+        // check if languageType is not null and the language is python
+        if (languageType == "python") {
 
             // Get the cell title
             result.push("# " + divElement.innerText.split("\n")[0]);
